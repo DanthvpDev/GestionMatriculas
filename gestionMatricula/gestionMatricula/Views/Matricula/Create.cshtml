@@ -1,0 +1,185 @@
+﻿@model gestionMatricula.ViewModels.MatriculaViewModel
+@{
+    ViewData["Title"] = "Nueva Matrícula";
+}
+<section>
+    <section>
+        <h1>@ViewData["Title"]</h1>
+    </section>
+
+    <form asp-action="CreateMatricula">
+        <section class="row">
+            <div class="d-flex justify-content-between mb-3">
+                <div>
+                    <label asp-for="Num_Recibo" class="form-label"></label>
+                    <input asp-for="Num_Recibo" type="number" name="Num_Recibo" value="@Model.Num_Recibo" class="form-control"/>
+                </div>
+                <div>
+                    <label asp-for="Fecha_Matricula" class="form-label"></label>
+                    <input id="fechaMatricula" asp-for="Fecha_Matricula" class="form-control" value="@(Model.Fecha_Matricula.ToString("yyyy-MM-dd"))" type="date" readonly />
+                    <span asp-validation-for="Fecha_Matricula" class="form-text text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="id_Periodo" class="form-label"></label>
+                    <input type="number" id="periodo" asp-for="id_Periodo" class="form-control" readonly />
+                    <span asp-validation-for="id_Periodo" class="form-text text-danger"></span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="row">
+            <h3>Información del Estudiante</h3>
+            <div class="mb-3 col d-flex">
+                <div class="d-flex gap-2">
+                    <div>
+                        <label asp-for="id_Estudiante" class="form-label"></label>
+                        <input asp-for="id_Estudiante" class="form-control" id="idEstudiante" type="text" accept="form-control"  readonly />
+                        <span asp-validation-for="id_Estudiante" class="form-text text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="NombreEstudiante" class="form-label"></label>
+                        <div class="input-group">
+                            <input asp-for="NombreEstudiante" id="nombreEstudiante" type="text" name="NombreEstudiante" accept="form-control" class="form-control" readonly />
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buscarEstudiantes">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="d-flex justify-content-between mb-3">
+                <div>
+                    <label asp-for="Costo_Matricula" class="form-label"></label>
+                    <input asp-for="Costo_Matricula" class="form-control" type="number" />
+                    <span asp-validation-for="Costo_Matricula" class="form-text text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Descuento_Matricula" class="form-label"></label>
+                    <input asp-for="Descuento_Matricula" class="form-control" type="number" />
+                    <span asp-validation-for="Descuento_Matricula" class="form-text text-danger"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="row">
+            <h3>Selección de Materias</h3>
+            <div class="d-flex flex-column">
+                <label class="form-label">Materia</label>
+                <select class="form-select" asp-for="id_MateriaAbierta" asp-items="@(new SelectList(Model?.MateriasAbiertas, "Id_MateriaAbierta", "NombreMateriaCarrera"))">
+                    <option value="">-- Seleccione una materia --</option>
+                </select>
+                <span asp-validation-for="id_MateriaAbierta" class="form-text text-danger"></span>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="d-flex gap-2">
+                <button class="btn btn-light">Limpiar</button>
+                <input type="submit" name="btnGuardarMatricula" class="btn btn-success" value="Guardar" />
+            </div>
+        </section>
+    </form>
+
+    @* ---- MODAL Estudiantes----*@
+    <article class="modal fade" id="buscarEstudiantes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar Estudiante</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    @await Html.PartialAsync("BuscarEstudiante", ViewData["Estudiantes"])
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="Limpiar()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Error en la operación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @ViewData["MensajeError"]
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="my-4">
+    <h2>Materias Seleccionadas</h2>
+    <div>
+        <table id="tablaMateriasMatriculadas" class="table">
+            <thead class="table-group-divider">
+                <tr>
+                    <th>Código</th>
+                    <th>Materia - Carrera</th>
+                    <th>Creditos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.MateriasMatriculadas)
+                {
+                    <tr>
+                        <td>@item.CodMateria</td>
+                        <td>@item.NombreMateriaCarrera</td>
+                        <td>@item.CreditosMateria</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/Matricula.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            $('#tablaMateriasMatriculadas').DataTable({
+                "language":{
+                    "url":"https://cdn.datatables.net/plug-ins/2.2.2/i18n/es-ES.json"
+                },
+                "lengthChange":false,
+                "pageLength":15,
+                "searching":true,
+                "columnDefs":[
+                    {
+                        targets:0,
+                        className:'text-start'
+                    },
+                    {
+                        targets:1,
+                        className:'text-center'
+                    },
+                    {
+                        targets:2,
+                        className:'text-center'
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            let mostrarModal = "@ViewData["MostrarModal"]";
+            if (mostrarModal === "True") {
+                $("#errorModal").show();
+            }
+        });
+    </script>
+}

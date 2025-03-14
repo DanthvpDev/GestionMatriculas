@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Limelight&display=swap');
+
+
+:root {
+    --sky-Blue: #09788B;
+}
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: "Lato", serif;
+    margin-bottom: 60px;
+
+    .row {
+        width: 100%;
+    }
+}
+
+h1, .h1 {
+    font-family: "Limelight", serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding:0;
+}
+
+.sideNav {
+    background-color: var(--sky-Blue);
+}
+
+ul.nav li a:hover {
+    background: #d8d8d8;
+    color: var(--sky-Blue) !important;
+}
+
+#homeImage {
+    height: 35vh;
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+}
+
+body > div.row {
+    flex-wrap: wrap;
+}
+
+.green-check {
+    color: #14c84a;
+}

@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|c:\\users\\danth\\ina\\programacionwebasp.net\\actividad_comrobacion\\gestionmatricula\\gestionmatricula\\views\\matricula\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|solutionrelative:gestionmatricula\\views\\matricula\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|c:\\users\\danth\\ina\\programacionwebasp.net\\actividad_comrobacion\\gestionmatricula\\gestionmatricula\\services\\imatriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|solutionrelative:gestionmatricula\\services\\imatriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|c:\\users\\danth\\ina\\programacionwebasp.net\\actividad_comrobacion\\gestionmatricula\\gestionmatricula\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|solutionrelative:gestionmatricula\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|c:\\users\\danth\\ina\\programacionwebasp.net\\actividad_comrobacion\\gestionmatricula\\gestionmatricula\\services\\matriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|solutionrelative:gestionmatricula\\services\\matriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|c:\\users\\danth\\ina\\programacionwebasp.net\\actividad_comrobacion\\gestionmatricula\\gestionmatricula\\dtos\\materiasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1642FF59-B5F6-4E85-BC08-02B72A4B4456}|gestionMatricula\\gestionMatricula.csproj|solutionrelative:gestionmatricula\\dtos\\materiasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 257,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MatriculaController.cs",
+              "DocumentMoniker": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Controllers\\MatriculaController.cs",
+              "RelativeDocumentMoniker": "gestionMatricula\\Controllers\\MatriculaController.cs",
+              "ToolTip": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Controllers\\MatriculaController.cs",
+              "RelativeToolTip": "gestionMatricula\\Controllers\\MatriculaController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAEwGcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:58:38.572Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MatriculaService.cs",
+              "DocumentMoniker": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Services\\MatriculaService.cs",
+              "RelativeDocumentMoniker": "gestionMatricula\\Services\\MatriculaService.cs",
+              "ToolTip": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Services\\MatriculaService.cs",
+              "RelativeToolTip": "gestionMatricula\\Services\\MatriculaService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAwEwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:55:11.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MateriasDTO.cs",
+              "DocumentMoniker": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\DTOs\\MateriasDTO.cs",
+              "RelativeDocumentMoniker": "gestionMatricula\\DTOs\\MateriasDTO.cs",
+              "ToolTip": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\DTOs\\MateriasDTO.cs",
+              "RelativeToolTip": "gestionMatricula\\DTOs\\MateriasDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:48:55.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IMatriculaService.cs",
+              "DocumentMoniker": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Services\\IMatriculaService.cs",
+              "RelativeDocumentMoniker": "gestionMatricula\\Services\\IMatriculaService.cs",
+              "ToolTip": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Services\\IMatriculaService.cs",
+              "RelativeToolTip": "gestionMatricula\\Services\\IMatriculaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:11:20.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Views\\Matricula\\Create.cshtml",
+              "RelativeDocumentMoniker": "gestionMatricula\\Views\\Matricula\\Create.cshtml",
+              "ToolTip": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\ACTIVIDAD_COMROBACION\\gestionMatricula\\gestionMatricula\\Views\\Matricula\\Create.cshtml",
+              "RelativeToolTip": "gestionMatricula\\Views\\Matricula\\Create.cshtml",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAAALQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T23:14:01.715Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

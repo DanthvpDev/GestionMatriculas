@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Estudiante>
+<table class="table" id="tablaEstudiantes">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre Completo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id_Estudiante)</td>
+                <td>@Html.DisplayFor(modelItem => item.NombreCompleto)</td>
+                <td>
+                    @{
+                        string llamadaSeleccionar = $"Seleccionar('{item.Id_Estudiante}','{item.NombreCompleto}')";
+                    }
+                    <a href="#" onclick="@llamadaSeleccionar" data-bs-dismiss="modal">Seleccionar</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

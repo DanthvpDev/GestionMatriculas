@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - gestionMatricula</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/gestionMatricula.styles.css" asp-append-version="true" />
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--DATATABLE-->
+    <link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
+</head>
+<body class="p-0">
+    <div class="row m-0 p-0 w-100">
+        <div class="col-2 flex-nowrap sideNav">
+            <div class="d-flex flex-column align-items-center align-items-sm-start ps-2 pt-3 text-white min-vh-100">
+                <section class="py-3 border-bottom border-light px-0">
+                    <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="h1 fs-3 d-none d-sm-inline">U San Ramón</span>
+                    </a>
+                </section>
+                <section class="py-2">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu1">
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link align-middle px-1 text-white">
+                                <i class="fa-solid fa-home"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Privacy" class="nav-link align-middle px-1 text-white">
+                                <i class="fas fa-user-secret"></i> Privacidad
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu2">
+                        <li>
+                            <a href="#menuMatriculas" data-bs-toggle="collapse" class="nav-link px-1 align-middle text-white">
+                                <i class="fa-solid fa-file-contract"></i> <span class="ms-1 d-none d-sm-inline">Matrículas</span>
+                            </a>
+                            <div class="collapse" id="menuMatriculas" data-bs-parent="#menu2">
+                                <ul class="nav flex-column ms-1 ps-2">
+                                    <li class="w-100">
+                                        <a asp-controller="Matricula" asp-action="Create" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Nueva matrícula</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Editar matrícula</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Eliminar martícula</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a asp-controller="Matricula" asp-action="Index" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Ver todo</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#menuEstudiantes" data-bs-toggle="collapse" class="nav-link px-1 align-middle text-white">
+                                <i class="fa-solid fa-graduation-cap"></i> <span class="ms-1 d-none d-sm-inline">Estudiantes</span>
+                            </a>
+                            <div class="collapse" id="menuEstudiantes" data-bs-parent="#menu2">
+                                <ul class="nav flex-column ms-1 ps-2">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Ver todo</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Nuevo estudiante</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Actualizar información</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#menuProfesores" data-bs-toggle="collapse" class="nav-link px-1 align-middle text-white">
+                                <i class="fa-solid fa-chalkboard-user"></i> <span class="ms-1 d-none d-sm-inline">Profesores</span>
+                            </a>
+                            <div class="collapse" id="menuProfesores" data-bs-parent="#menu2">
+                                <ul class="nav flex-column ms-1 ps-2">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Ver todo</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Nuevo profesor</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-1 text-white"> <span class="d-none d-sm-inline">Actualizar información</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="col-10 p-0">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted m-0">
+            <div class="container">
+                &copy; 2025 - gestionMatricula - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+    </footer>
+    <!--JQUERY-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--DATA TABLES-->
+    <script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
